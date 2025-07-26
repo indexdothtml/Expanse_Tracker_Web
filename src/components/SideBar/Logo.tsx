@@ -3,7 +3,7 @@ function Logo() {
     <div>
       <span className="font-bold">
         <span>Split</span>
-        <span className="text-[#F18C09]">/wise</span>
+        <span className="text-[var(--primary-color)]">/wise</span>
       </span>
     </div>
   );

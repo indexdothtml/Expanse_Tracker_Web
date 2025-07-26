@@ -1,6 +1,6 @@
 import { Group } from "lucide-react";
 
-import { shortNameOf } from "../utils/utilityFunctions";
+import { shortNameOf } from "../../utils/utilityFunctions";
 
 type GroupImageProps = {
   imageURL?: string;

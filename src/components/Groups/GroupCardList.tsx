@@ -8,7 +8,9 @@ type GroupCardListProps = {
 function GroupCardList({ title = "title", listHeight }: GroupCardListProps) {
   return (
     <div className="w-full">
-      <h4 className="text-xs text-[#F18C09] font-semibold mb-2">{title}</h4>
+      <h4 className="text-xs text-[var(--primary-color)] font-semibold mb-2">
+        {title}
+      </h4>
       <ul className={`flex flex-col gap-2 overflow-y-scroll ${listHeight}`}>
         <GroupCard name="Our Nest" status="owed" isPinned={true} />
         <GroupCard name="Hideout" status="owe" isPinned={false} />

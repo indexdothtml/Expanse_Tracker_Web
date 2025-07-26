@@ -3,6 +3,10 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --primary-color: #f18c09;
+  }
+
   html {
     box-sizing: border-box;
   }
@@ -14,14 +18,5 @@
     /* Initializing font */
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-  }
-}
-
-@theme {
-  --bottomBorderAnimation: bottomBorderExpand 2s ease-in-out linear;
-  @keyframes bottomBorderExpand {
-    0% 100% {
-      width: 2px;
-    }
   }
 }

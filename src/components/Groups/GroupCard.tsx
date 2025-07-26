@@ -1,6 +1,6 @@
 import { Pin, PinOff } from "lucide-react";
 
-import { GroupImage } from "./index";
+import { GroupImage } from "../index";
 
 type GroupCardProps = {
   image?: string;
