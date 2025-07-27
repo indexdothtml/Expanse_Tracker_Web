@@ -1,12 +1,18 @@
-import { SearchBar, ExpanseTableHeader } from "../index";
+import { Trash2 } from "lucide-react";
+
+import { SearchBar, ExpanseTableHeader, ExpanseTableRow } from "../index";
+import { useSelectedExpanse } from "../../hooks/useSelectedExpanse";
 
 function ExpanseTable() {
+  const selectedExpanse = useSelectedExpanse();
+
   return (
     <>
       <h3 className="text-sm font-semibold text-[var(--primary-color)]">
         Expanses
       </h3>
-      <div className="flex justify-between items-center">
+
+      <div className="flex justify-between items-center pl-8 pr-8 mt-2 mb-2">
         <p className="text-xs font-semibold">
           Expanses <span className="text-gray-400">13</span>
         </p>
@@ -18,7 +24,48 @@ function ExpanseTable() {
           Add Expanse
         </button>
       </div>
-      <ExpanseTableHeader />
+
+      <div role="table" className="w-full mb-4">
+        <ExpanseTableHeader />
+        <div
+          role="rowgroup"
+          className="h-80 overflow-y-scroll scroll-container"
+        >
+          <ExpanseTableRow
+            id="1E"
+            name="car fuel long sdffggw ljalje asdfjeo"
+            amount={1000}
+            date="01 July 2025"
+            paidBy="Venket Sai Krishna Kommonaboina"
+            youOwe={0}
+            isRowSelected={true}
+          />
+          <ExpanseTableRow
+            id="2E"
+            name="car fuel long sdffggw ljalje asdfjeo"
+            amount={1000}
+            date="01 July 2025"
+            paidBy="Venket Sai Krishna Kommonaboina"
+            youOwe={0}
+            isRowSelected={true}
+          />
+        </div>
+      </div>
+
+      <div role="status" className="pl-8">
+        {selectedExpanse && selectedExpanse.length !== 0 && (
+          <p className="flex items-center gap-5 text-xs font-semibold">
+            <span>
+              Selected{" "}
+              <span className="text-gray-400">{selectedExpanse.length}</span>
+            </span>{" "}
+            <Trash2
+              size={16}
+              className="hover:text-[var(--primary-color)] hover:cursor-pointer"
+            />
+          </p>
+        )}
+      </div>
     </>
   );
 }

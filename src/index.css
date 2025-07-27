@@ -19,4 +19,31 @@
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
   }
+
+  /* custome scrollbar styles className = 'scroll-container' */
+  /* Firefox */
+  .scroll-container {
+    scrollbar-width: thin; /* Makes scrollbar thinner */
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent; /* Thumb and track */
+  }
+
+  /* WebKit (Chrome, Safari, Edge) */
+  .scroll-container::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+
+  .scroll-container::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+  }
+
+  /* Optional: Prevent layout shift when scrollbar appears */
+  .scroll-container {
+    scrollbar-gutter: stable;
+  }
 }
